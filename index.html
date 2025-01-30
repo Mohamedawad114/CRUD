@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+      <link rel="website icon" href="download.jpg">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CRUDS</title>
+  </head>
+  <body>
+<div class="container">
+  <div class="head">
+    <div class="main_text">
+      <h1>CRUDS</h1>
+      <p>product management system</p>
+    </div>
+  </div>  
+    <div class="inputs">
+      <input type="text" placeholder="Title" id="title">
+      <div class="prices">
+      <input onkeyup="gettotal()" type="number" placeholder="Price" id="price">
+      <input onkeyup="gettotal()" type="number" placeholder="Taxes" id="taxe">
+      <input onkeyup="gettotal()" type="number" placeholder="Ads" id="ads">
+      <input onkeyup="gettotal()" type="number" placeholder="Discount" id="discount">
+      <small id="total"> </small>
+      </div>
+    <input type="number" placeholder="Count" id="count">
+    <input type="text" placeholder="Category" id="category">
+    <button type="submit" id="create">create</button>
+    </div>
+    <div class="outputs">
+      <input type="text" onkeyup="searchdata(this.value)" placeholder="Search" id="search">
+    <div class="btns">
+      <button type="button"onclick="getsearchmood(this.id)" id="title_s">Search By Title</button>
+      <button type="button"onclick="getsearchmood(this.id)"id="category_s">Search By Category</button> 
+    </div>
+    <div id="delete_all">
+      
+    </div>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Taxes</th>
+        <th>Ads</th>
+        <th>Discount</th>
+        <th>Total</th>
+        <th>Category</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      <tbody id="tbody"  >
+      </tbody>
+    </table>
+    <div id="pagination" class="pagination-buttons"></div>
+    
+
+</div> 
+</div>
+<div class="footer">
+  <button type="button" onclick="mode()"  id="btn-light"><i class="bi bi-moon-stars-fill"  ></i></button>
+  <div class="contact">
+    <a href="#">Contact US</a>
+  <i class="bi bi-telephone"></i>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
